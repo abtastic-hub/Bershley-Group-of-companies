@@ -1,128 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bershley Group | Graphic Design, Web Design & Business Services South Africa</title>
-    <meta name="description" content="Bershley Group is a South African creative and business solutions company offering graphic design, web design, business registration, and tender compliance services." />
-    <meta name="keywords" content="Bershley Group, graphic design South Africa, web design Mthatha, business registration, tender compliance, Bershire Artistry, Finab" />
-    <meta name="author" content="Bershley Group" />
-    <meta property="og:title" content="Bershley Group" />
-    <meta property="og:description" content="Graphic design, web design, business registration and tender compliance services in South Africa." />
-    <meta property="og:type" content="website" />
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0b1220;
-            color: white;
-            line-height: 1.6;
-        }
-        header {
-            background: #111827;
-            padding: 20px;
-            text-align: center;
-            font-weight: bold;
-            color: #38bdf8;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            color: #38bdf8;
-        }
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            color: #cbd5e1;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 20px;
-            background: #38bdf8;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        h2 {
-            color: #38bdf8;
-            margin-bottom: 15px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: #111827;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #111827;
-            color: #94a3b8;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        Bershley Group of Companies
-    </header>
-    <div class="hero">
-        <h1>Culture & Capital</h1>
-        <p>
-            A modern holding company bridging creativity, business, and financial innovation.
-        </p>
-        <a class="btn" href="#contact">Contact Us</a>
-    </div>
-    <section>
-        <h2>About Us</h2>
-        <p>
-           <section>
-    <h2>About Us</h2>
-    <p>
-        Bershley Group is a modern South African holding company operating through creative and business-focused divisions. 
-        We specialize in graphic design, web design, business registration services, and tender compliance support through Bershire Artistry, 
-        while also exploring financial systems and strategic innovation through Finab.
-    </p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bershley Group | Graphic Design, Web Design & Business Services South Africa</title>
 
-    <p>
-        Our mission is to help individuals, startups, and established businesses build strong brands, become legally compliant, 
-        and access growth opportunities through professional design, digital solutions, and business development services.
-    </p>
+<meta name="description" content="Bershley Group is a South African creative and business solutions company offering graphic design, web design, business registration, and tender compliance services." />
+
+<meta name="keywords" content="Bershley Group, graphic design South Africa, web design Mthatha, business registration, tender compliance, Bershire Artistry, Finab" />
+
+<meta name="author" content="Bershley Group" />
+
+<meta property="og:title" content="Bershley Group" />
+<meta property="og:description" content="Graphic design, web design, business registration and tender compliance services in South Africa." />
+<meta property="og:type" content="website" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Animated background glow */
+    .bg-glow {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: rgba(56,189,248,0.15);
+      filter: blur(120px);
+      border-radius: 50%;
+      top: -200px;
+      left: -200px;
+      animation: float 8s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translate(0,0); }
+      50% { transform: translate(120px,80px); }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #38bdf8;
+      font-size: 20px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      background: linear-gradient(90deg, #38bdf8, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeUp 1s ease-out;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 20px auto;
+      color: #94a3b8;
+      font-size: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      border-radius: 12px;
+      background: rgba(56,189,248,0.15);
+      border: 1px solid rgba(56,189,248,0.4);
+      color: white;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: rgba(56,189,248,0.25);
+    }
+
+    section {
+      padding: 60px 10%;
+      position: relative;
+      z-index: 2;
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 20px;
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(56,189,248,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="bg-glow"></div>
+
+<header>
+  <div class="logo">Bershley Group</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Culture. Capital. Creation.</h1>
+  <p>
+    A modern holding company specializing in graphic design, web development, business registration, and tender compliance solutions across South Africa.
+  </p>
+  <a class="btn" href="#contact">Get Started</a>
 </section>
-        </p>
-    </section>
-    <section>
-        <h2>Subsidiaries</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Bershire Artistry</h3>
-                <p>Bershire Artistry specializes in graphic design, web design, business registration services, and tender compliance support. We help individuals, startups, and established businesses build strong brand identities, establish compliant operations, and access growth opportunities through professional design and administrative services.</p>
-            </div>
-            <div class="card">
-                <h3>Finab</h3>
-                <p>Financial systems, investment strategy, and business innovation.</p>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: info@bershleygroup.online</p>
-    </section>
-    <footer>
-        © 2026 Bershley Group — All Rights Reserved
-    </footer>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p style="color:#94a3b8; max-width:700px;">
+    Bershley Group builds powerful brands and business systems that help individuals, startups, and companies establish strong identity, compliance, and digital presence.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Graphic Design</h3>
+      <p>Logos, posters, branding kits, and visual identity systems.</p>
+    </div>
+
+    <div class="card">
+      <h3>Web Design</h3>
+      <p>Modern responsive websites with premium UI and UX design.</p>
+    </div>
+
+    <div class="card">
+      <h3>Business Registration</h3>
+      <p>Company registration, documentation, and setup support.</p>
+    </div>
+
+    <div class="card">
+      <h3>Tender Compliance</h3>
+      <p>Assistance with tender documents, compliance, and applications.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="color:#94a3b8;">Email: info@bershleygroup.online</p>
+</section>
+
+<footer>
+  © 2026 Bershley Group — All Rights Reserved
+</footer>
+
 </body>
 </html>
